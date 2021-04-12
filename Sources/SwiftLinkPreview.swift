@@ -541,14 +541,14 @@ extension SwiftLinkPreview {
 
         for metatag in metatags {
             for tag in possibleTags {
-                if (metatag.range(of: "property=\"og:\(tag)") != nil ||
-                    metatag.range(of: "property='og:\(tag)") != nil ||
-                    metatag.range(of: "name=\"twitter:\(tag)") != nil ||
-                    metatag.range(of: "name='twitter:\(tag)") != nil ||
-                    metatag.range(of: "name=\"\(tag)") != nil ||
-                    metatag.range(of: "name='\(tag)") != nil ||
-                    metatag.range(of: "itemprop=\"\(tag)") != nil ||
-                    metatag.range(of: "itemprop='\(tag)") != nil) {
+                if (metatag.range(of: "property=\"og:\(tag)\"") != nil ||
+                    metatag.range(of: "property='og:\(tag)\"") != nil ||
+                    metatag.range(of: "name=\"twitter:\(tag)\"") != nil ||
+                    metatag.range(of: "name='twitter:\(tag)\"") != nil ||
+                    metatag.range(of: "name=\"\(tag)\"") != nil ||
+                    metatag.range(of: "name='\(tag)\"") != nil ||
+                    metatag.range(of: "itemprop=\"\(tag)\"") != nil ||
+                    metatag.range(of: "itemprop='\(tag)\"") != nil) {
 
                     if let key = Response.Key(rawValue: tag),
                         result.value(for: key) == nil {
